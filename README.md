@@ -5,6 +5,7 @@
 - .github/workflows/main.yaml
 
 ## Beispiel für .yaml-Struktur
+```yaml
 name: xxx --> benennt die Actions
 on: [push] --> Action wird durch push gestartet
 
@@ -23,3 +24,4 @@ jobs:
           sudo apt-get install -y nodejs
           node -v
           npm -v
+```
