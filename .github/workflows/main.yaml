@@ -8,8 +8,8 @@ jobs:
       - name: "Clone git repo"
         run: | 
           git clone https://github.com/JonasBa97/GitHub_Actions.git
-          git fetch --all
-          git checkout master
+        #  git fetch --all
+        #  git checkout master
       
       - name: "Node.js 18 installieren"
         run: | 
@@ -17,4 +17,3 @@ jobs:
           sudo apt-get install -y nodejs
           node -v
           npm -v
-          
