@@ -1,0 +1,20 @@
+name: Node.js CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Clone git repo"
+        run: | 
+          git clone https://github.com/JonasBa97/GitHub_Actions.git
+          git fetch --all
+          git checkout master
+      
+      - name: "Node.js 18 installieren"
+        run: | 
+          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash
+          sudo apt-get install -y nodejs
+          node -v
+          npm -v
+          
