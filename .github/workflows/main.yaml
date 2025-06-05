@@ -5,15 +5,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Clone git repo"
-        run: | 
-          git clone https://github.com/JonasBa97/GitHub_Actions.git
+      - name: "clone and checkout git repo"
+        uses: actions/checkout@v4
+        #run: | 
+        #  git clone https://github.com/JonasBa97/GitHub_Actions.git
         #  git fetch --all
         #  git checkout master
       
       - name: "Node.js 18 installieren"
-        run: | 
-          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash
-          sudo apt-get install -y nodejs
-          node -v
-          npm -v
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+        #run: | 
+        #  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash
+        #  sudo apt-get install -y nodejs
+        #  node -v
+        #  npm -v
